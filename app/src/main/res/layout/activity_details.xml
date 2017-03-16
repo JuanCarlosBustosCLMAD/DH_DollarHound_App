@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_details"
     android:layout_width="match_parent"
@@ -8,6 +9,182 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.juancarlos.dh_dollarhound_app.DetailsActivity">
+    tools:context="com.example.juancarlos.dh_dollarhound_app.DetailsActivity"
+    android:background="@color/colorPrimaryDark">
+
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centreName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/centre_Name_Detail_size"
+        tools:text="Nombre del centro cambiario" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centreName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/centreAddress"
+        android:textColor="@color/colorText"
+        android:layout_alignRight="@+id/centreName"
+        android:layout_alignEnd="@+id/centreName"
+        android:textSize="@dimen/centre_Address_Detail_size"
+        tools:text="Dirección" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/placeholder_1"
+        android:layout_below="@+id/centreAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/centrePhoto" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/centrePhoto"
+        android:layout_toRightOf="@+id/centrePhoto"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:id="@+id/centrePhone"
+        android:textColor="@color/colorText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/centre_InfoBox_Detail_size"
+        tools:text="Teléfono" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centrePhone"
+        android:layout_alignLeft="@+id/centrePhone"
+        android:layout_alignStart="@+id/centrePhone"
+        android:layout_marginTop="11dp"
+        android:id="@+id/centreWeb"
+        android:textColor="@color/colorText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/centre_InfoBox_Detail_size"
+        tools:text="Sitio Web"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centreBuyLabel"
+    android:textColor="@color/colorText"
+    tools:text="Compra a..."
+        android:layout_alignBottom="@+id/centrePhoto"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/centreBuy"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/centre_Price_Detail_size"
+        tools:text="COMPRA"
+        android:layout_below="@+id/centreBuyLabel"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centreSellLabel"
+        android:textColor="@color/colorText"
+        tools:text="Venta a..."
+        android:layout_alignBaseline="@+id/centreBuyLabel"
+        android:layout_alignBottom="@+id/centreBuyLabel"
+        android:layout_alignRight="@+id/centreAddress"
+        android:layout_alignEnd="@+id/centreAddress" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centreSell"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/centre_Price_Detail_size"
+        tools:text="VENTA"
+        android:layout_alignBaseline="@+id/centreBuy"
+        android:layout_alignBottom="@+id/centreBuy"
+        android:layout_alignLeft="@+id/centreSellLabel"
+        android:layout_alignStart="@+id/centreSellLabel" />
+
+    <Button
+        android:text="FAVORITO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favourite_Button"
+        android:layout_alignBaseline="@+id/rating_Button"
+        android:layout_alignBottom="@+id/rating_Button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="CALIFICAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/rating_Button"
+        android:layout_below="@+id/centreBuy"
+        android:layout_alignLeft="@+id/centreBuyLabel"
+        android:layout_alignStart="@+id/centreBuyLabel"
+        android:layout_toLeftOf="@+id/centreSell"
+        android:layout_toStartOf="@+id/centreSell" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/openMap_Button"
+        tools:text="CÓMO LLEGAR"
+        android:layout_alignBaseline="@+id/rating_Button"
+        android:layout_alignBottom="@+id/rating_Button"
+        android:layout_toLeftOf="@+id/centreBuy"
+        android:layout_toStartOf="@+id/centreBuy" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rating_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:id="@+id/commentsTable">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
 
 </RelativeLayout>
+
